@@ -1,1 +1,4 @@
-# tasks-app vanilla js
+# Vanilla JavaScript project.
+* HTML
+* CSS 
+* JS
