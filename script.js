@@ -15,8 +15,8 @@ let list = localStorage.getItem("tasks") !== null ? JSON.parse(localStorage.getI
 
 document.querySelector("#add").disabled = true;
 
-document.querySelector('[name="task"]').addEventListener("keyup", function() {
-    
+
+document.querySelector('[name="task"]').addEventListener("keyup", function() {    
     this.value.length < 1 ? this.nextElementSibling.disabled = true : 
     this.nextElementSibling.disabled = false;
 })
