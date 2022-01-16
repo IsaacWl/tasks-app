@@ -37,10 +37,6 @@ document.querySelector("#add").addEventListener("click", function() {
 function createElements() {
     const tasks = document.querySelector("#tasks");
     const values = [...list];
-    // const ul = document.createElement("ul");
-    // const newArray = copy.filter(v => {
-    //     return v.id === id
-    // })
     tasks.textContent = '';
     for (const value of values) {
         const li = document.createElement("li");
@@ -117,8 +113,6 @@ function handleComplete(e) {
     })
     list = newArray
     localStorage.setItem("tasks", JSON.stringify(list))
-    // element.style.textDecoration = 
-    // element.style.textDecoration === "line-through" ? "" : "line-through"
     addCompleteToList()
 }
 function addCompleteToList() {
