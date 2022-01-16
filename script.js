@@ -2,8 +2,8 @@ let list = localStorage.getItem("tasks") !== null ? JSON.parse(localStorage.getI
 
 (function () {
     document.querySelector(".field").focus();
-    createElements()
-    addCompleteToList()
+    createTask()
+    isComplete()
 })()
 
 document.querySelector("#add").disabled = true;
@@ -30,11 +30,12 @@ document.querySelector("#add").addEventListener("click", function() {
     list.push(taskModel);
     localStorage.setItem("tasks", JSON.stringify(list))
     form.reset()
-    createElements()
+    createTask()
+    isComplete()
     document.querySelector(".field").focus()
 })
 
-function createElements() {
+function createTask() {
     const tasks = document.querySelector("#tasks");
     const values = [...list];
     tasks.textContent = '';
@@ -110,10 +111,11 @@ function handleComplete(e) {
     })
     list = newArray
     localStorage.setItem("tasks", JSON.stringify(list))
-    addCompleteToList()
+    isComplete()
 }
-function addCompleteToList() {
+function isComplete() {
     const elements = document.querySelectorAll('.items');
+
     elements.forEach(element => {
         for (const value of list) {
             if (element.getAttribute('key') == value.id) {
