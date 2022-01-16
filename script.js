@@ -82,8 +82,6 @@ function deleteTask(e) {
 function editTask(e) {
     const key = e.target.getAttribute("key");
     const prev = e.target.parentNode.previousElementSibling;
-    console.log(prev)
-    console.log(key)
     const content = list.filter(v => {
         return v.id === parseFloat(key);
     })
@@ -101,7 +99,6 @@ function editTask(e) {
         })
         list = newArray;
         localStorage.setItem("tasks", JSON.stringify(list))
-        console.log(newArray)
     })
 }
 
