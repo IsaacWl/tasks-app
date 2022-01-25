@@ -8,6 +8,7 @@ body {
 .flex {
     display: flex;
     flex-flow: column;
+    justify-content: center;
     gap: 10px;
     align-items: center;
 }
@@ -44,8 +45,8 @@ h1 {
 }
 
 .field {
-    max-width: 700px;
-    width: 80%;
+    min-width: 45vw;
+    width: 100%;
     border: 1px solid #ccc;
     outline: none;
 }
@@ -53,7 +54,9 @@ h1 {
 .field, button {
     padding: .25rem .25rem;
 }
-
+.flex-container {
+    display: flex;
+}
 .flex-container > button {
     background: #ff7555;
     border: none;
@@ -100,7 +103,7 @@ ul > div > button:nth-child(2) {
     align-items: center;
     justify-content: center;
     flex-flow: column;
-    max-width: 900px;
+    min-width: 70vw;
     width: 100%;
 }
 .items > div > * {
